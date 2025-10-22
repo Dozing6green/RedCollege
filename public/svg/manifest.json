@@ -1,0 +1,223 @@
+{
+  "icons": [
+    {
+      "id": "icon-1",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "id": "icon-10",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "id": "icon-11",
+      "viewBox": "0 0 21 22"
+    },
+    {
+      "id": "icon-12",
+      "viewBox": "0 0 21 21"
+    },
+    {
+      "id": "icon-13",
+      "viewBox": "0 0 21 21"
+    },
+    {
+      "id": "icon-14",
+      "viewBox": "0 0 21 21"
+    },
+    {
+      "id": "icon-15",
+      "viewBox": "0 0 17 17"
+    },
+    {
+      "id": "icon-16",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "id": "icon-17",
+      "viewBox": "0 0 21 22"
+    },
+    {
+      "id": "icon-18",
+      "viewBox": "0 0 21 21"
+    },
+    {
+      "id": "icon-19",
+      "viewBox": "0 0 21 21"
+    },
+    {
+      "id": "icon-2",
+      "viewBox": "0 0 33 28"
+    },
+    {
+      "id": "icon-20",
+      "viewBox": "0 0 21 21"
+    },
+    {
+      "id": "icon-21",
+      "viewBox": "0 0 17 17"
+    },
+    {
+      "id": "icon-22",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "id": "icon-23",
+      "viewBox": "0 0 21 22"
+    },
+    {
+      "id": "icon-24",
+      "viewBox": "0 0 21 21"
+    },
+    {
+      "id": "icon-25",
+      "viewBox": "0 0 21 21"
+    },
+    {
+      "id": "icon-26",
+      "viewBox": "0 0 21 21"
+    },
+    {
+      "id": "icon-27",
+      "viewBox": "0 0 17 17"
+    },
+    {
+      "id": "icon-28",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "id": "icon-29",
+      "viewBox": "0 0 21 22"
+    },
+    {
+      "id": "icon-3",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "id": "icon-30",
+      "viewBox": "0 0 21 21"
+    },
+    {
+      "id": "icon-31",
+      "viewBox": "0 0 21 21"
+    },
+    {
+      "id": "icon-32",
+      "viewBox": "0 0 21 21"
+    },
+    {
+      "id": "icon-33",
+      "viewBox": "0 0 17 17"
+    },
+    {
+      "id": "icon-4",
+      "viewBox": "0 0 22 22"
+    },
+    {
+      "id": "icon-5",
+      "viewBox": "0 0 13 13"
+    },
+    {
+      "id": "icon-6",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "id": "icon-7",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "id": "icon-8",
+      "viewBox": "0 0 28 31"
+    },
+    {
+      "id": "icon-9",
+      "viewBox": "0 0 17 17"
+    }
+  ],
+  "illustrations": [
+    {
+      "id": "icon-34",
+      "file": "svg/icon-34.svg"
+    },
+    {
+      "id": "icon-35",
+      "file": "svg/icon-35.svg"
+    },
+    {
+      "id": "icon-36",
+      "file": "svg/icon-36.svg"
+    },
+    {
+      "id": "icon-37",
+      "file": "svg/icon-37.svg"
+    },
+    {
+      "id": "icon-38",
+      "file": "svg/icon-38.svg"
+    },
+    {
+      "id": "icon-39",
+      "file": "svg/icon-39.svg"
+    },
+    {
+      "id": "icon-40",
+      "file": "svg/icon-40.svg"
+    },
+    {
+      "id": "icon-41",
+      "file": "svg/icon-41.svg"
+    },
+    {
+      "id": "icon-42",
+      "file": "svg/icon-42.svg"
+    },
+    {
+      "id": "icon-43",
+      "file": "svg/icon-43.svg"
+    },
+    {
+      "id": "icon-44",
+      "file": "svg/icon-44.svg"
+    },
+    {
+      "id": "icon-45",
+      "file": "svg/icon-45.svg"
+    },
+    {
+      "id": "icon-46",
+      "file": "svg/icon-46.svg"
+    },
+    {
+      "id": "icon-47",
+      "file": "svg/icon-47.svg"
+    },
+    {
+      "id": "icon-48",
+      "file": "svg/icon-48.svg"
+    },
+    {
+      "id": "icon-49",
+      "file": "svg/icon-49.svg"
+    },
+    {
+      "id": "icon-50",
+      "file": "svg/icon-50.svg"
+    },
+    {
+      "id": "icon-51",
+      "file": "svg/icon-51.svg"
+    },
+    {
+      "id": "icon-52",
+      "file": "svg/icon-52.svg"
+    },
+    {
+      "id": "icon-53",
+      "file": "svg/icon-53.svg"
+    }
+  ],
+  "meta": {
+    "generatedAt": "2025-10-22T05:05:10.163Z",
+    "totalIcons": 33,
+    "totalIllustrations": 20
+  }
+}

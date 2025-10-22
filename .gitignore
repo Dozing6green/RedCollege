@@ -1,0 +1,48 @@
+# ===================================
+# Campus Royal - .gitignore
+# ===================================
+
+# Variables de entorno (¡IMPORTANTE!)
+.env
+.env.local
+.env.production
+*.env
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Logs
+logs/
+*.log
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporal
+tmp/
+temp/
+*.tmp
+
+# Build
+dist/
+build/
+
+# API Keys (seguridad extra)
+*api-key*
+*apikey*
+credentials.json
+secrets.json

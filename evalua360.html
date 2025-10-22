@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evalúa360 - Campus Royal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 10px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+
+        /* Animación para el chatbot */
+        .chat-panel {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .chat-panel.closed {
+            transform: translateX(-100%);
+        }
+
+        /* Animación de bounce para puntos de carga */
+        @keyframes bounce {
+            0%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-8px); }
+        }
+
+        .animate-bounce {
+            animation: bounce 1.4s infinite;
+        }
+    </style>
+</head>
+<body class="bg-[#f5f5fb] min-h-screen flex flex-col">
+    <!-- Navigation Bar -->
+    <nav class="bg-white h-14 border-b border-[silver] shadow-[0px_0px_32px_-15px_rgba(168,175,182,0.15)] flex items-center px-6 justify-between">
+        <div class="flex items-center gap-6">
+            <!-- Menu Button -->
+            <button class="hover:bg-gray-100 p-2 rounded-md transition-colors">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M3 12h18M3 6h18M3 18h18" stroke="#212b32" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+
+            <!-- Logo and Title - EXACTO DEL SITIO FIGMA -->
+            <a href="planificaciones.html" class="flex gap-4 items-center p-1 hover:opacity-80 transition-opacity">
+                <svg class="h-7 w-[32.516px]" fill="none" viewBox="0 0 33 28">
+                    <g clip-path="url(#clip0)">
+                        <path d="M24.9174 0H3.53292C1.67239 0 0.164134 1.55015 0.164134 3.46237C0.164134 5.37458 1.67239 6.92473 3.53292 6.92473H24.9174C26.7779 6.92473 28.2862 5.37458 28.2862 3.46237C28.2862 1.55015 26.7779 0 24.9174 0Z" fill="#22A3E6"></path>
+                        <path d="M24.9174 10.5376H7.63405C5.77352 10.5376 4.26527 12.0878 4.26527 14C4.26527 15.9122 5.77352 17.4624 7.63405 17.4624H24.9174C26.7779 17.4624 28.2862 15.9122 28.2862 14C28.2862 12.0878 26.7779 10.5376 24.9174 10.5376Z" fill="#FFCC00"></path>
+                        <path d="M29.0185 21.0753H7.63405C5.77352 21.0753 4.26527 22.6254 4.26527 24.5376C4.26527 26.4498 5.77352 28 7.63405 28H29.0185C30.8791 28 32.3873 26.4498 32.3873 24.5376C32.3873 22.6254 30.8791 21.0753 29.0185 21.0753Z" fill="#00A488"></path>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0">
+                            <rect fill="white" height="28" width="32.5161"></rect>
+                        </clipPath>
+                    </defs>
+                </svg>
+                <p class="text-[#0f6491] text-xl font-medium">Evalúa360</p>
+            </a>
+        </div>
+
+        <!-- Right Side -->
+        <div class="flex items-center gap-4">
+            <!-- Filtros superiores -->
+            <select class="px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#0f6491]">
+                <option>Icon + SchoolName</option>
+            </select>
+            <select class="px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#0f6491]">
+                <option>2025</option>
+            </select>
+            <select class="px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#0f6491]">
+                <option>Course ShortName</option>
+            </select>
+            <button class="w-10 h-10 rounded-full bg-gradient-to-br from-[#22a3e6] to-[#0f6491] flex items-center justify-center hover:opacity-90 transition-opacity shadow-md">
+                <span class="text-white font-semibold text-lg">U</span>
+            </button>
+            <button class="hover:bg-gray-100 p-2 rounded-md transition-colors">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <rect x="4" y="4" width="4" height="4" fill="#0f6491"/>
+                    <rect x="10" y="4" width="4" height="4" fill="#0f6491"/>
+                    <rect x="16" y="4" width="4" height="4" fill="#0f6491"/>
+                    <rect x="4" y="10" width="4" height="4" fill="#0f6491"/>
+                    <rect x="10" y="10" width="4" height="4" fill="#0f6491"/>
+                    <rect x="16" y="10" width="4" height="4" fill="#0f6491"/>
+                    <rect x="4" y="16" width="4" height="4" fill="#0f6491"/>
+                    <rect x="10" y="16" width="4" height="4" fill="#0f6491"/>
+                    <rect x="16" y="16" width="4" height="4" fill="#0f6491"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Sub Navigation -->
+    <div class="bg-white border-b border-gray-200 px-6 py-2">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <button class="flex items-center gap-2 text-[#0f6491] hover:text-[#0d5578]">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M15 10H5M10 5l-5 5 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span class="font-medium">Informe de Tendencias</span>
+                </button>
+            </div>
+            <div class="flex gap-2">
+                <button class="px-4 py-2 text-[#666] hover:text-[#0f6491] font-medium transition-colors">Sostenedor</button>
+                <button class="px-4 py-2 text-[#666] hover:text-[#0f6491] font-medium transition-colors">Global</button>
+                <button class="px-4 py-2 text-[#666] hover:text-[#0f6491] font-medium transition-colors">Cursos</button>
+                <button class="px-4 py-2 text-[#666] hover:text-[#0f6491] font-medium transition-colors">Ensayo</button>
+                <button class="px-4 py-2 bg-[#0f6491] text-white rounded-md font-medium">Estudiantes</button>
+                <button id="toggleChat" class="flex items-center gap-2 px-4 py-2 border-2 border-[#0f6491] text-[#0f6491] rounded-md hover:bg-[#0f6491] hover:text-white transition-all font-medium">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Asesor Inteligente
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content with Chatbot -->
+    <div class="flex flex-1 relative overflow-hidden">
+        <!-- Chat Panel Lateral Izquierdo -->
+        <aside id="chatPanel" class="chat-panel closed absolute left-0 top-0 h-full w-[450px] bg-white shadow-2xl z-50 flex flex-col">
+            <!-- Chat Header -->
+            <div class="bg-gradient-to-r from-[#22a3e6] to-[#0f6491] p-4 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-lg">Asesor Inteligente</h3>
+                        <p class="text-white/80 text-xs">Análisis de informes</p>
+                    </div>
+                </div>
+                <button id="closeChat" class="w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition-all">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L6 18M6 6l12 12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Chat Messages -->
+            <div id="chatMessages" class="flex-1 overflow-y-auto p-4 space-y-3 custom-scrollbar bg-gradient-to-b from-gray-50 to-white">
+                <!-- Mensaje de bienvenida -->
+                <div class="flex gap-2">
+                    <div class="w-8 h-8 rounded-full bg-gradient-to-br from-[#22a3e6] to-[#0f6491] flex items-center justify-center flex-shrink-0">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="bg-white rounded-xl rounded-tl-none p-3 shadow-sm max-w-[85%]">
+                        <p class="text-sm text-[#212b32]">Analicemos juntos estos informes, ¿cómo puedo ayudarte?</p>
+                    </div>
+                </div>
+
+                <!-- Sugerencias como botones -->
+                <div class="space-y-2 pl-10">
+                    <button class="chat-suggestion w-full text-left px-3 py-2 bg-white border border-[#0f6491] text-[#0f6491] rounded-lg text-sm hover:bg-[#0f6491] hover:text-white transition-all">
+                        Necesito estrategias para mejorar el aprendizaje de los cursos de menor puntaje
+                    </button>
+                    <button class="chat-suggestion w-full text-left px-3 py-2 bg-white border border-[#0f6491] text-[#0f6491] rounded-lg text-sm hover:bg-[#0f6491] hover:text-white transition-all">
+                        Crea un listado con los estudiantes con puntaje menor a 270
+                    </button>
+                    <button class="chat-suggestion w-full text-left px-3 py-2 bg-white border border-[#0f6491] text-[#0f6491] rounded-lg text-sm hover:bg-[#0f6491] hover:text-white transition-all">
+                        Crea un informe general con los hallazgos más importantes en función a los resultados de la última evaluación
+                    </button>
+                </div>
+            </div>
+
+            <!-- Typing Indicator -->
+            <div id="chatTyping" class="px-4 pb-2" style="display: none;">
+                <div class="flex gap-2 items-center">
+                    <div class="w-8 h-8 rounded-full bg-gradient-to-br from-[#22a3e6] to-[#0f6491] flex items-center justify-center flex-shrink-0">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="bg-white rounded-xl rounded-tl-none p-3 shadow-sm">
+                        <div class="flex gap-1">
+                            <div class="w-2 h-2 bg-[#0f6491] rounded-full animate-bounce" style="animation-delay: 0s;"></div>
+                            <div class="w-2 h-2 bg-[#0f6491] rounded-full animate-bounce" style="animation-delay: 0.2s;"></div>
+                            <div class="w-2 h-2 bg-[#0f6491] rounded-full animate-bounce" style="animation-delay: 0.4s;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Input -->
+            <div class="p-4 bg-white border-t border-gray-200">
+                <form id="chatForm" class="flex gap-2">
+                    <input
+                        type="text"
+                        id="chatInput"
+                        class="flex-1 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#0f6491] text-sm"
+                        placeholder="Escribe tu pregunta aquí..."
+                    />
+                    <button type="submit" class="px-4 py-2 bg-gradient-to-r from-[#22a3e6] to-[#0f6491] text-white rounded-lg hover:shadow-lg transition-all">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 p-6 overflow-y-auto custom-scrollbar">
+            <!-- Page Header -->
+            <div class="bg-white rounded-xl p-6 mb-6 shadow-sm">
+                <div class="flex items-center justify-between mb-4">
+                    <h1 class="text-[#0f6491] text-2xl font-bold">Informe Estudiantes</h1>
+                    <div class="flex gap-3">
+                        <input type="text" placeholder="Buscar" class="px-4 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#0f6491]">
+                        <select class="px-4 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#0f6491]">
+                            <option>Curso: 2 Medio A</option>
+                        </select>
+                        <select class="px-4 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#0f6491]">
+                            <option>Tipo: SIMCE</option>
+                        </select>
+                        <select class="px-4 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#0f6491]">
+                            <option>Prueba: Matemática</option>
+                        </select>
+                        <button class="px-6 py-2 bg-[#0f6491] text-white rounded-md font-medium hover:bg-[#0d5578] transition-colors">
+                            Descarga masiva
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tabla de Estudiantes -->
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="bg-[#e8f4f8] border-b border-gray-200">
+                                <th class="text-left px-4 py-3 text-sm font-semibold text-[#212b32]">Estudiante</th>
+                                <th class="text-center px-4 py-3 text-sm font-semibold text-[#212b32]">E1</th>
+                                <th class="text-center px-4 py-3 text-sm font-semibold text-[#212b32]">E2</th>
+                                <th class="text-center px-4 py-3 text-sm font-semibold text-[#212b32]">E3</th>
+                                <th class="text-center px-4 py-3 text-sm font-semibold text-[#212b32]">E4</th>
+                                <th class="text-center px-4 py-3 text-sm font-semibold text-[#212b32]">E5</th>
+                                <th class="text-center px-4 py-3 text-sm font-semibold text-[#212b32]">E6</th>
+                                <th class="text-center px-4 py-3 text-sm font-semibold text-[#212b32]">E7</th>
+                                <th class="text-center px-4 py-3 text-sm font-semibold text-[#0f6491]">Promedio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded-full bg-[#0f6491] flex items-center justify-center text-white font-semibold text-xs">MR</div>
+                                        <span class="text-sm font-medium text-[#212b32]">Martínez Ríos Joaquín</span>
+                                    </div>
+                                </td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">316</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">278</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">349</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">359</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">278</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">363</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">282</td>
+                                <td class="text-center px-4 py-3 text-sm font-bold text-[#0f6491]">318</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded-full bg-[#0f6491] flex items-center justify-center text-white font-semibold text-xs">VC</div>
+                                        <span class="text-sm font-medium text-[#212b32]">Vargas Cordero Isidora</span>
+                                    </div>
+                                </td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">342</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">366</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">272</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">367</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">331</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">304</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">348</td>
+                                <td class="text-center px-4 py-3 text-sm font-bold text-[#0f6491]">333</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded-full bg-[#0f6491] flex items-center justify-center text-white font-semibold text-xs">MC</div>
+                                        <span class="text-sm font-medium text-[#212b32]">Muñoz Castro Nicolás</span>
+                                    </div>
+                                </td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">349</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">288</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">326</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">341</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">383</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">304</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">341</td>
+                                <td class="text-center px-4 py-3 text-sm font-bold text-[#0f6491]">333</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded-full bg-[#0f6491] flex items-center justify-center text-white font-semibold text-xs">CP</div>
+                                        <span class="text-sm font-medium text-[#212b32]">Castillo Pizarro Felipe</span>
+                                    </div>
+                                </td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">320</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">324</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">396</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">279</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">261</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">359</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">375</td>
+                                <td class="text-center px-4 py-3 text-sm font-bold text-[#0f6491]">331</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded-full bg-[#0f6491] flex items-center justify-center text-white font-semibold text-xs">RM</div>
+                                        <span class="text-sm font-medium text-[#212b32]">Rojas Morales Diego</span>
+                                    </div>
+                                </td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">377</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">258</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">338</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">264</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">274</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">273</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">359</td>
+                                <td class="text-center px-4 py-3 text-sm font-bold text-[#0f6491]">306</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded-full bg-[#0f6491] flex items-center justify-center text-white font-semibold text-xs">FS</div>
+                                        <span class="text-sm font-medium text-[#212b32]">Fernández Silva Emilia</span>
+                                    </div>
+                                </td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">305</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">260</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">284</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">386</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">319</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">239</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">317</td>
+                                <td class="text-center px-4 py-3 text-sm font-bold text-[#0f6491]">301</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded-full bg-[#0f6491] flex items-center justify-center text-white font-semibold text-xs">SA</div>
+                                        <span class="text-sm font-medium text-[#212b32]">Salazar Araya Antonia</span>
+                                    </div>
+                                </td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">364</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">323</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">343</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">267</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">240</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">357</td>
+                                <td class="text-center px-4 py-3 text-sm text-[#666]">258</td>
+                                <td class="text-center px-4 py-3 text-sm font-bold text-[#0f6491]">307</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Tabs de Análisis -->
+            <div class="bg-white rounded-xl shadow-sm mb-6">
+                <div class="border-b border-gray-200 px-6">
+                    <div class="flex gap-1">
+                        <button class="px-4 py-3 border-b-2 border-[#0f6491] text-[#0f6491] font-semibold text-sm">Análisis por eje</button>
+                        <button class="px-4 py-3 text-[#666] hover:text-[#0f6491] font-medium text-sm">Análisis por habilidades</button>
+                        <button class="px-4 py-3 text-[#666] hover:text-[#0f6491] font-medium text-sm">Análisis por [Objetivo de Aprendizaje]</button>
+                        <button class="px-4 py-3 text-[#666] hover:text-[#0f6491] font-medium text-sm">Observaciones</button>
+                    </div>
+                </div>
+
+                <div class="p-6">
+                    <!-- Header del análisis -->
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center gap-2">
+                            <button class="w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M12 4l-8 8 8 8" stroke="#666" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                            <h2 class="text-xl font-semibold text-[#212b32]">Análisis por eje</h2>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="flex items-center gap-2">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <circle cx="8" cy="8" r="8" fill="#0f6491"/>
+                                </svg>
+                                <span class="text-sm text-[#666]">% Insuficiente</span>
+                                <span class="text-sm font-semibold text-[#212b32]">-60%</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <circle cx="8" cy="8" r="8" fill="#666"/>
+                                </svg>
+                                <span class="text-sm text-[#666]">% Adecuado</span>
+                                <span class="text-sm font-semibold text-[#212b32]">+90%</span>
+                            </div>
+                            <select class="px-3 py-2 border border-gray-300 rounded-md text-sm">
+                                <option>Seleccione un Eje</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Gráficos -->
+                    <div class="space-y-4">
+                        <h3 class="font-semibold text-[#212b32]">Eje 1. Números y operaciones</h3>
+
+                        <!-- Gráfico de barras horizontales -->
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <span class="text-sm text-[#666] w-32">Joaquín Martínez</span>
+                                <div class="flex-1 bg-gray-100 rounded-full h-6 overflow-hidden">
+                                    <div class="bg-gradient-to-r from-[#00d4aa] to-[#00a488] h-full rounded-full flex items-center justify-end pr-2" style="width: 100%">
+                                        <span class="text-xs text-white font-semibold">100%</span>
+                                    </div>
+                                </div>
+                                <span class="text-sm font-semibold text-[#212b32] w-12">100</span>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <span class="text-sm text-[#666] w-32">Isidora Vargas</span>
+                                <div class="flex-1 bg-gray-100 rounded-full h-6 overflow-hidden">
+                                    <div class="bg-gradient-to-r from-[#d64040] to-[#a83030] h-full rounded-full flex items-center justify-end pr-2" style="width: 24%">
+                                        <span class="text-xs text-white font-semibold">24%</span>
+                                    </div>
+                                </div>
+                                <span class="text-sm font-semibold text-[#212b32] w-12">24</span>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <span class="text-sm text-[#666] w-32">Nicolás Muñoz</span>
+                                <div class="flex-1 bg-gray-100 rounded-full h-6 overflow-hidden">
+                                    <div class="bg-gradient-to-r from-[#0d9cdb] to-[#0f6491] h-full rounded-full flex items-center justify-end pr-2" style="width: 43%">
+                                        <span class="text-xs text-white font-semibold">43%</span>
+                                    </div>
+                                </div>
+                                <span class="text-sm font-semibold text-[#212b32] w-12">43</span>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <span class="text-sm text-[#666] w-32">Felipe Castillo</span>
+                                <div class="flex-1 bg-gray-100 rounded-full h-6 overflow-hidden">
+                                    <div class="bg-gradient-to-r from-[#0d9cdb] to-[#0f6491] h-full rounded-full flex items-center justify-end pr-2" style="width: 52%">
+                                        <span class="text-xs text-white font-semibold">52%</span>
+                                    </div>
+                                </div>
+                                <span class="text-sm font-semibold text-[#212b32] w-12">52</span>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <span class="text-sm text-[#666] w-32">Antonia Rojas</span>
+                                <div class="flex-1 bg-gray-100 rounded-full h-6 overflow-hidden">
+                                    <div class="bg-gradient-to-r from-[#00d4aa] to-[#00a488] h-full rounded-full flex items-center justify-end pr-2" style="width: 93%">
+                                        <span class="text-xs text-white font-semibold">93%</span>
+                                    </div>
+                                </div>
+                                <span class="text-sm font-semibold text-[#212b32] w-12">93</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Toggle Chat Panel
+        const chatPanel = document.getElementById('chatPanel');
+        const toggleChatBtn = document.getElementById('toggleChat');
+        const closeChatBtn = document.getElementById('closeChat');
+
+        toggleChatBtn.addEventListener('click', () => {
+            chatPanel.classList.remove('closed');
+        });
+
+        closeChatBtn.addEventListener('click', () => {
+            chatPanel.classList.add('closed');
+        });
+
+        // Chat functionality
+        const chatForm = document.getElementById('chatForm');
+        const chatInput = document.getElementById('chatInput');
+        const chatMessages = document.getElementById('chatMessages');
+        const chatTyping = document.getElementById('chatTyping');
+
+        // Handle suggestion buttons
+        document.querySelectorAll('.chat-suggestion').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const question = btn.textContent.trim();
+                sendMessage(question);
+            });
+        });
+
+        chatForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const message = chatInput.value.trim();
+            if (message) {
+                sendMessage(message);
+                chatInput.value = '';
+            }
+        });
+
+        function sendMessage(text) {
+            // Add user message
+            addMessage(text, 'user');
+
+            // Show typing indicator
+            chatTyping.style.display = 'flex';
+
+            // Simulate AI response
+            setTimeout(() => {
+                chatTyping.style.display = 'none';
+
+                const responses = {
+                    'estrategias': 'Necesito estrategias para mejorar el aprendizaje de los cursos de menor puntaje',
+                    'listado': 'Crea un listado con los estudiantes con puntaje menor a 270',
+                    'informe': 'Crea un informe general con los hallazgos más importantes'
+                };
+
+                let response = '';
+                const lowerText = text.toLowerCase();
+
+                if (lowerText.includes('estrategia') || lowerText.includes('mejorar') || lowerText.includes('puntaje')) {
+                    response = 'Basándome en el análisis de los datos, te recomiendo las siguientes estrategias:\n\n1. Implementar sesiones de reforzamiento personalizadas para estudiantes con puntajes inferiores a 270.\n2. Crear grupos de estudio colaborativo donde estudiantes con mejor rendimiento apoyen a sus compañeros.\n3. Desarrollar material didáctico adicional enfocado en los ejes con menor rendimiento.\n4. Realizar evaluaciones formativas semanales para monitorear el progreso.\n\n¿Te gustaría que profundice en alguna de estas estrategias?';
+                } else if (lowerText.includes('listado') || lowerText.includes('270')) {
+                    response = 'Aquí está el listado de estudiantes con puntaje promedio menor a 270:\n\nNo se encontraron estudiantes con promedio menor a 270 en este curso.\n\nEl estudiante con menor promedio es Fernández Silva Emilia con 301 puntos, lo cual sigue siendo un rendimiento aceptable.\n\n¿Deseas analizar otro rango de puntaje?';
+                } else if (lowerText.includes('informe') || lowerText.includes('hallazgo')) {
+                    response = '📊 INFORME GENERAL - Evaluación Matemática 2 Medio A\n\n✅ Hallazgos Positivos:\n• Promedio general del curso: 318 puntos (sobre estándar)\n• 100% de estudiantes sobre 270 puntos\n• Joaquín Martínez lidera con 100% de logro en Eje 1\n\n⚠️ Áreas de Mejora:\n• Isidora Vargas muestra 24% en Eje 1 (requiere atención)\n• Variabilidad entre E2 (menor rendimiento) y E4 (mejor rendimiento)\n\n💡 Recomendaciones:\n• Reforzar contenidos del Eje 1 con Isidora\n• Mantener metodología aplicada en E4\n• Implementar talleres de nivelación para E2';
+                } else {
+                    response = 'Entiendo tu consulta. Estoy analizando los datos de los informes para brindarte la información más precisa. ¿Podrías especificar si necesitas:\n\n• Análisis de estudiantes específicos\n• Comparación entre ejes de aprendizaje\n• Estrategias de mejora\n• Informes detallados de rendimiento';
+                }
+
+                addMessage(response, 'ai');
+            }, 1500);
+        }
+
+        function addMessage(text, type) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = type === 'user' ? 'flex gap-2 flex-row-reverse' : 'flex gap-2';
+
+            const avatar = document.createElement('div');
+            if (type === 'user') {
+                avatar.className = 'w-8 h-8 rounded-full bg-gradient-to-br from-[#FFCC00] to-[#FF9500] flex items-center justify-center flex-shrink-0';
+                avatar.innerHTML = '<span class="text-white font-bold text-xs">TÚ</span>';
+            } else {
+                avatar.className = 'w-8 h-8 rounded-full bg-gradient-to-br from-[#22a3e6] to-[#0f6491] flex items-center justify-center flex-shrink-0';
+                avatar.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>`;
+            }
+
+            const contentDiv = document.createElement('div');
+            contentDiv.className = type === 'user'
+                ? 'bg-gradient-to-r from-[#22a3e6] to-[#0f6491] text-white rounded-xl rounded-tr-none p-3 shadow-sm max-w-[85%]'
+                : 'bg-white rounded-xl rounded-tl-none p-3 shadow-sm max-w-[85%]';
+
+            const textP = document.createElement('p');
+            textP.className = type === 'user' ? 'text-sm text-white whitespace-pre-line' : 'text-sm text-[#212b32] whitespace-pre-line';
+            textP.textContent = text;
+
+            contentDiv.appendChild(textP);
+            messageDiv.appendChild(avatar);
+            messageDiv.appendChild(contentDiv);
+
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+    </script>
+</body>
+</html>

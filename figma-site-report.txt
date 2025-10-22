@@ -1,0 +1,112 @@
+
+╔══════════════════════════════════════════════════════════════╗
+║           📊 INFORME DE CAPTURA - SITIO FIGMA               ║
+╚══════════════════════════════════════════════════════════════╝
+
+📍 URL: https://campus-royal-43590135.figma.site/
+📅 Fecha: 21/10/2025, 23:43:11
+📄 Título: AI-Redcollege
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📁 ARCHIVOS GENERADOS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ figma-site-captured.html      - HTML completo renderizado
+✅ figma-site-info.json          - Información estructurada (JSON)
+✅ figma-site-screenshot.png     - Screenshot completo del sitio
+✅ figma-site-report.txt         - Este informe
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📐 ESTRUCTURA DETECTADA:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Secciones encontradas: 5
+
+1. <nav> class="bg-white h-14 border-b border-[silver] shadow-[0px_0px_32px_-15px_rgba(168,175,182,0.15)]" (1 hijos)
+2. <main> class="flex justify-center p-10 flex-1" (1 hijos)
+3. <section> class="bg-white rounded-xl flex-1 min-w-[650px] max-w-[800px] flex flex-col p-5 max-h-[calc(100vh-160px)]" (2 hijos)
+4. <header> class="flex flex-col gap-4 p-4 pb-2" (3 hijos)
+5. <section> class="bg-white rounded-2xl flex-1 min-w-[600px] max-w-[900px] overflow-hidden flex flex-col max-h-[calc(100vh-160px)]" (3 hijos)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎨 FUENTES DETECTADAS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎨 PALETA DE COLORES (primeros 20):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. rgb(255, 255, 255)
+2. oklch(0.145 0 0)
+3. rgb(245, 245, 251)
+4. rgb(15, 100, 145)
+5. rgb(33, 43, 50)
+6. rgb(225, 244, 253)
+7. rgb(76, 98, 114)
+8. rgb(157, 157, 157)
+9. rgb(34, 163, 230)
+10. rgb(102, 102, 102)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📝 CONTENIDO PRINCIPAL (primeros textos):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. <button> Planificaciones
+2. <p> Planificaciones
+3. <span> Créditos: 15.000
+4. <button> U
+5. <span> U
+6. <p> Planificación Matemática 2025
+7. <p> 50%
+8. <p> 2 Enseñanza Básica A - Matemática
+9. <button> Descargar
+10. <span> Descargar
+11. <button> Componentes curriculares (12)
+12. <span> Componentes curriculares (12)
+13. <button> Crear unidad
+14. <span> Crear unidad
+15. <span> 01
+16. <p> Titulo de la unidad, si supera el limite de caracteres...
+17. <p> Elaboración de trabajos basados en lo cotidiano y las emociones. Al dibujo y la ...
+18. <span> 22/03/2024 - 22/10/2024
+19. <span> 22
+20. <span> 0
+21. <span> 0%
+22. <span> Unidad 02
+23. <p> Titulo de la unidad, si supera el limite de caracteres...
+24. <p> Elaboración de trabajos basados en lo cotidiano y las emociones. Al dibujo y la ...
+25. <span> 22/03/2024 - 22/10/2024
+26. <span> 22
+27. <span> 04
+28. <span> 50%
+29. <span> Unidad 03
+30. <p> Titulo de la unidad, si supera el limite de caracteres...
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🖼️  IMÁGENES ENCONTRADAS: 3
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. data:image/svg+xml,%3Csvg%20preserveAspectRatio%3D%22none%22%20width%3D%22100%25... (24x24)
+2. data:image/svg+xml,%3Csvg%20preserveAspectRatio%3D%22none%22%20width%3D%22100%25... (20x20)
+3. data:image/svg+xml,%3Csvg%20preserveAspectRatio%3D%22none%22%20width%3D%22100%25... (24x24)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔗 NAVEGACIÓN (primeros enlaces):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 PRÓXIMOS PASOS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Revisa "figma-site-captured.html" para ver el código completo
+2. Abre "figma-site-screenshot.png" para ver el diseño visual
+3. Consulta "figma-site-info.json" para datos estructurados
+4. Usa esta información para replicar el sitio en index.html
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Captura completada exitosamente!

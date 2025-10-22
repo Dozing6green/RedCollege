@@ -1,0 +1,358 @@
+{
+  "title": "AI-Redcollege",
+  "textos": [
+    {
+      "tag": "button",
+      "text": "Planificaciones",
+      "classes": "flex gap-4 items-center p-1 hover:opacity-80 transition-opacity"
+    },
+    {
+      "tag": "p",
+      "text": "Planificaciones",
+      "classes": "text-[#0f6491] text-xl font-medium"
+    },
+    {
+      "tag": "span",
+      "text": "Créditos: 15.000",
+      "classes": "text-[#0f6491] font-semibold"
+    },
+    {
+      "tag": "button",
+      "text": "U",
+      "classes": "w-10 h-10 rounded-full bg-gradient-to-br from-[#22a3e6] to-[#0f6491] flex items-center justify-center hover:opacity-90 transition-opacity shadow-md"
+    },
+    {
+      "tag": "span",
+      "text": "U",
+      "classes": "text-white font-semibold text-lg"
+    },
+    {
+      "tag": "p",
+      "text": "Planificación Matemática 2025",
+      "classes": "text-[#212b32] text-[17px] font-semibold truncate"
+    },
+    {
+      "tag": "p",
+      "text": "50%",
+      "classes": "text-[#0f6491] text-[11px] font-bold"
+    },
+    {
+      "tag": "p",
+      "text": "2 Enseñanza Básica A - Matemática",
+      "classes": "text-[#4c6272] text-base font-medium truncate"
+    },
+    {
+      "tag": "button",
+      "text": "Descargar",
+      "classes": "flex items-center gap-2 px-3 py-4 rounded-md border border-[#0f6491] text-[#0f6491] hover:bg-[#0f6491] hover:text-white active:scale-95 transition-all"
+    },
+    {
+      "tag": "span",
+      "text": "Descargar",
+      "classes": "text-[17px] font-semibold"
+    },
+    {
+      "tag": "button",
+      "text": "Componentes curriculares (12)",
+      "classes": "px-3 py-4 rounded-md border border-[#0f6491] text-[#0f6491] hover:bg-[#0f6491] hover:text-white active:scale-95 transition-all"
+    },
+    {
+      "tag": "span",
+      "text": "Componentes curriculares (12)",
+      "classes": "text-[17px] font-medium"
+    },
+    {
+      "tag": "button",
+      "text": "Crear unidad",
+      "classes": "flex gap-1 items-center px-3 py-4 rounded-md border border-[#0f6491] text-[#0f6491] hover:bg-[#0f6491] hover:text-white active:scale-95 transition-all group"
+    },
+    {
+      "tag": "span",
+      "text": "Crear unidad",
+      "classes": "text-[17px] font-medium"
+    },
+    {
+      "tag": "span",
+      "text": "01",
+      "classes": "text-[#212b32] text-lg font-semibold flex-shrink-0"
+    },
+    {
+      "tag": "p",
+      "text": "Titulo de la unidad, si supera el limite de caracteres...",
+      "classes": "text-[#212b32] text-base font-medium truncate"
+    },
+    {
+      "tag": "p",
+      "text": "Elaboración de trabajos basados en lo cotidiano y las emociones. Al dibujo y la pintura, se agrega la escultura. Observación de obras de arte de diferentes épocas y estilos...",
+      "classes": "text-[#4c6272] text-sm font-medium leading-relaxed line-clamp-2"
+    },
+    {
+      "tag": "span",
+      "text": "22/03/2024 - 22/10/2024",
+      "classes": "text-[#212b32] text-base font-medium whitespace-nowrap"
+    },
+    {
+      "tag": "span",
+      "text": "22",
+      "classes": "text-[#4c6272] text-base font-medium"
+    },
+    {
+      "tag": "span",
+      "text": "0",
+      "classes": "text-[#4c6272] text-base font-medium"
+    },
+    {
+      "tag": "span",
+      "text": "0%",
+      "classes": "text-[#4c6272] text-base font-medium"
+    },
+    {
+      "tag": "span",
+      "text": "Unidad 02",
+      "classes": "text-[#212b32] text-lg font-semibold flex-shrink-0"
+    },
+    {
+      "tag": "p",
+      "text": "Titulo de la unidad, si supera el limite de caracteres...",
+      "classes": "text-[#212b32] text-base font-medium truncate"
+    },
+    {
+      "tag": "p",
+      "text": "Elaboración de trabajos basados en lo cotidiano y las emociones. Al dibujo y la pintura, se agrega la escultura. Observación de obras de arte de diferentes épocas y estilos...",
+      "classes": "text-[#4c6272] text-sm font-medium leading-relaxed line-clamp-2"
+    },
+    {
+      "tag": "span",
+      "text": "22/03/2024 - 22/10/2024",
+      "classes": "text-[#212b32] text-base font-medium whitespace-nowrap"
+    },
+    {
+      "tag": "span",
+      "text": "22",
+      "classes": "text-[#4c6272] text-base font-medium"
+    },
+    {
+      "tag": "span",
+      "text": "04",
+      "classes": "text-[#4c6272] text-base font-medium"
+    },
+    {
+      "tag": "span",
+      "text": "50%",
+      "classes": "text-[#4c6272] text-base font-medium"
+    },
+    {
+      "tag": "span",
+      "text": "Unidad 03",
+      "classes": "text-[#212b32] text-lg font-semibold flex-shrink-0"
+    },
+    {
+      "tag": "p",
+      "text": "Titulo de la unidad, si supera el limite de caracteres...",
+      "classes": "text-[#212b32] text-base font-medium truncate"
+    },
+    {
+      "tag": "p",
+      "text": "Elaboración de trabajos basados en lo cotidiano y las emociones. Al dibujo y la pintura, se agrega la escultura. Observación de obras de arte de diferentes épocas y estilos...",
+      "classes": "text-[#4c6272] text-sm font-medium leading-relaxed line-clamp-2"
+    },
+    {
+      "tag": "span",
+      "text": "22/03/2024 - 22/10/2024",
+      "classes": "text-[#212b32] text-base font-medium whitespace-nowrap"
+    },
+    {
+      "tag": "span",
+      "text": "22",
+      "classes": "text-[#4c6272] text-base font-medium"
+    },
+    {
+      "tag": "span",
+      "text": "04",
+      "classes": "text-[#4c6272] text-base font-medium"
+    },
+    {
+      "tag": "span",
+      "text": "50%",
+      "classes": "text-[#4c6272] text-base font-medium"
+    },
+    {
+      "tag": "span",
+      "text": "Unidad 04",
+      "classes": "text-[#212b32] text-lg font-semibold flex-shrink-0"
+    },
+    {
+      "tag": "p",
+      "text": "Titulo de la unidad, si supera el limite de caracteres...",
+      "classes": "text-[#212b32] text-base font-medium truncate"
+    },
+    {
+      "tag": "p",
+      "text": "Elaboración de trabajos basados en lo cotidiano y las emociones. Al dibujo y la pintura, se agrega la escultura. Observación de obras de arte de diferentes épocas y estilos...",
+      "classes": "text-[#4c6272] text-sm font-medium leading-relaxed line-clamp-2"
+    },
+    {
+      "tag": "span",
+      "text": "22/03/2024 - 22/10/2024",
+      "classes": "text-[#212b32] text-base font-medium whitespace-nowrap"
+    },
+    {
+      "tag": "span",
+      "text": "22",
+      "classes": "text-[#4c6272] text-base font-medium"
+    },
+    {
+      "tag": "span",
+      "text": "04",
+      "classes": "text-[#4c6272] text-base font-medium"
+    },
+    {
+      "tag": "span",
+      "text": "50%",
+      "classes": "text-[#4c6272] text-base font-medium"
+    },
+    {
+      "tag": "span",
+      "text": "Unidad 01",
+      "classes": "text-[#0f6491] text-lg font-semibold"
+    },
+    {
+      "tag": "p",
+      "text": "Titulo de la unidad, si supera el limite de caracteres...",
+      "classes": "text-[#212b32] text-base font-medium truncate"
+    },
+    {
+      "tag": "button",
+      "text": "Ingresar a unidad",
+      "classes": "bg-white px-2 py-2 rounded-md border border-[#0f6491] text-[#0f6491] hover:bg-[#0f6491] hover:text-white active:scale-95 transition-all flex-shrink-0"
+    },
+    {
+      "tag": "span",
+      "text": "Ingresar a unidad",
+      "classes": "text-base font-medium"
+    },
+    {
+      "tag": "button",
+      "text": "Contenidos",
+      "classes": "px-4 py-4 border-b-2 border-[#212b32] hover:bg-gray-50 active:bg-gray-100 transition-colors"
+    },
+    {
+      "tag": "span",
+      "text": "Contenidos",
+      "classes": "text-[#212b32] text-[17px] font-semibold"
+    },
+    {
+      "tag": "button",
+      "text": "Clases",
+      "classes": "px-4 py-4 hover:bg-gray-50 active:bg-gray-100 transition-colors"
+    },
+    {
+      "tag": "span",
+      "text": "Clases",
+      "classes": "text-[#666666] text-[17px] font-medium"
+    },
+    {
+      "tag": "button",
+      "text": "Adecuaciones",
+      "classes": "px-4 py-4 hover:bg-gray-50 active:bg-gray-100 transition-colors"
+    },
+    {
+      "tag": "span",
+      "text": "Adecuaciones",
+      "classes": "text-[#666666] text-[17px] font-medium"
+    },
+    {
+      "tag": "button",
+      "text": "Subir planificación",
+      "classes": "flex gap-2 items-center px-2 py-2 rounded-md hover:bg-gray-50 active:bg-gray-100 transition-colors"
+    },
+    {
+      "tag": "span",
+      "text": "Subir planificación",
+      "classes": "text-[#0f6491] text-base font-medium"
+    },
+    {
+      "tag": "p",
+      "text": "Los contenidos se pueden impartir en una o más clases. Luego de crear un contenido, podrás definir las clases en las que se aplicará.",
+      "classes": "text-[#4c6272] text-base font-medium text-center max-w-[500px] leading-relaxed"
+    },
+    {
+      "tag": "button",
+      "text": "Crear contenido",
+      "classes": "bg-[#0f6491] flex gap-1 items-center px-3 py-4 rounded-md hover:bg-[#0d5578] active:scale-95 transition-all mt-2"
+    },
+    {
+      "tag": "span",
+      "text": "Crear contenido",
+      "classes": "text-white text-[17px] font-medium"
+    }
+  ],
+  "imagenes": [
+    {
+      "src": "data:image/svg+xml,%3Csvg%20preserveAspectRatio%3D%22none%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20overflow%3D%22visible%22%20style%3D%22display%3A%20block%3B%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cg%20id%3D%22add%22%3E%0A%3Cpath%20id%3D%22Vector%22%20d%3D%22M6%2012H18%22%20stroke%3D%22var(--stroke-0%2C%20%230F6491)%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3Cpath%20id%3D%22Vector_2%22%20d%3D%22M12%2018V6%22%20stroke%3D%22var(--stroke-0%2C%20%230F6491)%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3Cpath%20id%3D%22Vector_3%22%20opacity%3D%220%22%20d%3D%22M23.5%200.5V23.5H0.5V0.5H23.5Z%22%20stroke%3D%22var(--stroke-0%2C%20%230F6491)%22%2F%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A",
+      "alt": "add",
+      "width": 24,
+      "height": 24
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg%20preserveAspectRatio%3D%22none%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20overflow%3D%22visible%22%20style%3D%22display%3A%20block%3B%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20id%3D%22Vector%22%20d%3D%22M1%2011.8333V13.5C1%2013.942%201.17559%2014.366%201.48816%2014.6785C1.80072%2014.9911%202.22464%2015.1667%202.66667%2015.1667H12.6667C13.1087%2015.1667%2013.5326%2014.9911%2013.8452%2014.6785C14.1577%2014.366%2014.3333%2013.942%2014.3333%2013.5V11.8333M3.5%205.16667L7.66667%201M7.66667%201L11.8333%205.16667M7.66667%201V11%22%20stroke%3D%22var(--stroke-0%2C%20%230F6491)%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E%0A",
+      "alt": "upload",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg%20preserveAspectRatio%3D%22none%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20overflow%3D%22visible%22%20style%3D%22display%3A%20block%3B%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cg%20id%3D%22add%22%3E%0A%3Cpath%20id%3D%22Vector%22%20d%3D%22M6%2012H18%22%20stroke%3D%22var(--stroke-0%2C%20%230F6491)%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3Cpath%20id%3D%22Vector_2%22%20d%3D%22M12%2018V6%22%20stroke%3D%22var(--stroke-0%2C%20%230F6491)%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3Cpath%20id%3D%22Vector_3%22%20opacity%3D%220%22%20d%3D%22M23.5%200.5V23.5H0.5V0.5H23.5Z%22%20stroke%3D%22var(--stroke-0%2C%20%230F6491)%22%2F%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A",
+      "alt": "add",
+      "width": 24,
+      "height": 24
+    }
+  ],
+  "colores": [
+    "rgb(255, 255, 255)",
+    "oklch(0.145 0 0)",
+    "rgb(245, 245, 251)",
+    "rgb(15, 100, 145)",
+    "rgb(33, 43, 50)",
+    "rgb(225, 244, 253)",
+    "rgb(76, 98, 114)",
+    "rgb(157, 157, 157)",
+    "rgb(34, 163, 230)",
+    "rgb(102, 102, 102)"
+  ],
+  "fuentes": [
+    "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+  ],
+  "secciones": [
+    {
+      "tag": "nav",
+      "id": "",
+      "classes": "bg-white h-14 border-b border-[silver] shadow-[0px_0px_32px_-15px_rgba(168,175,182,0.15)]",
+      "children": 1
+    },
+    {
+      "tag": "main",
+      "id": "",
+      "classes": "flex justify-center p-10 flex-1",
+      "children": 1
+    },
+    {
+      "tag": "section",
+      "id": "",
+      "classes": "bg-white rounded-xl flex-1 min-w-[650px] max-w-[800px] flex flex-col p-5 max-h-[calc(100vh-160px)]",
+      "children": 2
+    },
+    {
+      "tag": "header",
+      "id": "",
+      "classes": "flex flex-col gap-4 p-4 pb-2",
+      "children": 3
+    },
+    {
+      "tag": "section",
+      "id": "",
+      "classes": "bg-white rounded-2xl flex-1 min-w-[600px] max-w-[900px] overflow-hidden flex flex-col max-h-[calc(100vh-160px)]",
+      "children": 3
+    }
+  ],
+  "links": []
+}

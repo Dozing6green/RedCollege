@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Royal - Guía de Inicio Rápido</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #22A3E6;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            color: #00A488;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        h3 {
+            color: #667eea;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .option-card {
+            background: #f9fafb;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            transition: all 0.3s;
+        }
+
+        .option-card:hover {
+            border-color: #22A3E6;
+            box-shadow: 0 4px 12px rgba(34, 163, 230, 0.2);
+        }
+
+        .option-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #1f2937;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .badge-easy {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .badge-recommended {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .badge-advanced {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        code {
+            background: #1f2937;
+            color: #10b981;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .code-block {
+            background: #1f2937;
+            color: #10b981;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+        }
+
+        .steps {
+            list-style: none;
+            counter-reset: step-counter;
+        }
+
+        .steps li {
+            counter-increment: step-counter;
+            margin: 15px 0;
+            padding-left: 45px;
+            position: relative;
+        }
+
+        .steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: linear-gradient(135deg, #22A3E6, #00A488);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #22A3E6, #00A488);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin: 10px 10px 10px 0;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(34, 163, 230, 0.3);
+        }
+
+        .warning {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .success {
+            background: #d1fae5;
+            border-left: 4px solid #10b981;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .info {
+            background: #dbeafe;
+            border-left: 4px solid #3b82f6;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .feature {
+            background: white;
+            border: 1px solid #e5e7eb;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .feature-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        th {
+            background: #f9fafb;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 Campus Royal</h1>
+        <p class="subtitle">Guía de Inicio Rápido - Plataforma Educativa con IA</p>
+
+        <div class="success">
+            <strong>✅ ¡Proyecto creado exitosamente!</strong><br>
+            Todos los archivos han sido generados. Sigue esta guía para comenzar.
+        </div>
+
+        <h2>📋 Archivos del Proyecto</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Archivo</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>index.html</code></td>
+                    <td>Página principal (Landing page)</td>
+                </tr>
+                <tr>
+                    <td><code>styles.css</code></td>
+                    <td>Estilos globales responsive</td>
+                </tr>
+                <tr>
+                    <td><code>main.js</code></td>
+                    <td>JavaScript principal del sitio</td>
+                </tr>
+                <tr>
+                    <td><code>ai-chat.js</code></td>
+                    <td>Sistema de chat con IA (multi-API)</td>
+                </tr>
+                <tr>
+                    <td><code>server.js</code></td>
+                    <td>Servidor Node.js + Express</td>
+                </tr>
+                <tr>
+                    <td><code>api-config.json</code></td>
+                    <td>Configuración de APIs de IA</td>
+                </tr>
+                <tr>
+                    <td><code>package.json</code></td>
+                    <td>Dependencias del proyecto</td>
+                </tr>
+                <tr>
+                    <td><code>.env.example</code></td>
+                    <td>Ejemplo de variables de entorno</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>🚀 Opciones de Inicio</h2>
+
+        <!-- OPCIÓN 1 -->
+        <div class="option-card">
+            <div class="option-title">
+                Opción 1: Inicio Rápido (Sin Backend)
+                <span class="badge badge-easy">MÁS FÁCIL</span>
+                <span class="badge badge-recommended">RECOMENDADO PARA DEMOS</span>
+            </div>
+            <p><strong>Ideal para:</strong> Presentaciones rápidas, demos visuales, pruebas sin configuración</p>
+            <p><strong>No requiere:</strong> Node.js, API keys, instalación de dependencias</p>
+
+            <h3>Pasos:</h3>
+            <ol class="steps">
+                <li>Abre el archivo <code>index.html</code> con doble clic</li>
+                <li>Se abrirá en tu navegador predeterminado</li>
+                <li>Haz clic en el botón flotante de IA (abajo a la derecha)</li>
+                <li>¡Prueba el chat! Funciona con respuestas simuladas inteligentes</li>
+            </ol>
+
+            <div class="info">
+                <strong>💡 Nota:</strong> El chat funcionará en modo simulación local con respuestas contextuales pre-programadas. No necesita conexión a internet ni APIs.
+            </div>
+
+            <a href="index.html" class="btn">▶️ Abrir Demo Ahora</a>
+        </div>
+
+        <!-- OPCIÓN 2 -->
+        <div class="option-card">
+            <div class="option-title">
+                Opción 2: Con Servidor y APIs Reales
+                <span class="badge badge-advanced">AVANZADO</span>
+            </div>
+            <p><strong>Ideal para:</strong> Demos profesionales, integración real con IA, producción</p>
+            <p><strong>Requiere:</strong> Node.js 16+, npm, API keys (OpenAI o Claude)</p>
+
+            <h3>Pasos:</h3>
+            <ol class="steps">
+                <li>
+                    <strong>Instalar Node.js</strong><br>
+                    Si no lo tienes, descárgalo de <a href="https://nodejs.org" target="_blank">nodejs.org</a>
+                </li>
+                <li>
+                    <strong>Abrir terminal en esta carpeta</strong><br>
+                    Click derecho en la carpeta → "Abrir en Terminal" o "Git Bash Here"
+                </li>
+                <li>
+                    <strong>Instalar dependencias</strong><br>
+                    <div class="code-block">npm install</div>
+                </li>
+                <li>
+                    <strong>Configurar variables de entorno</strong><br>
+                    <div class="code-block">copy .env.example .env</div>
+                    Edita el archivo <code>.env</code> y agrega tus API keys
+                </li>
+                <li>
+                    <strong>Iniciar el servidor</strong><br>
+                    <div class="code-block">npm start</div>
+                </li>
+                <li>
+                    <strong>Abrir en el navegador</strong><br>
+                    Ve a <code>http://localhost:3000</code>
+                </li>
+            </ol>
+
+            <div class="warning">
+                <strong>⚠️ API Keys necesarias:</strong><br>
+                • <strong>OpenAI:</strong> <a href="https://platform.openai.com/api-keys" target="_blank">Obtener aquí</a><br>
+                • <strong>Claude:</strong> <a href="https://console.anthropic.com/" target="_blank">Obtener aquí</a><br>
+                • <strong>Gemini:</strong> <a href="https://makersuite.google.com/app/apikey" target="_blank">Obtener aquí</a> (opcional)
+            </div>
+        </div>
+
+        <h2>🎯 Características Principales</h2>
+
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🎨</div>
+                <strong>Diseño Moderno</strong><br>
+                Landing page profesional responsive
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🤖</div>
+                <strong>Chat IA Multi-API</strong><br>
+                OpenAI, Claude, Gemini o simulación
+            </div>
+            <div class="feature">
+                <div class="feature-icon">💾</div>
+                <strong>Historial Persistente</strong><br>
+                Guarda conversaciones en JSON
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <strong>Efecto Typewriter</strong><br>
+                Respuestas con animación realista
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📱</div>
+                <strong>100% Responsive</strong><br>
+                Mobile, tablet, desktop
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔧</div>
+                <strong>Fácil Configuración</strong><br>
+                Todo en archivos JSON
+            </div>
+        </div>
+
+        <h2>🎮 Comandos del Chat (Consola)</h2>
+
+        <p>Abre la consola del navegador (F12) y prueba estos comandos:</p>
+
+        <div class="code-block">
+// Ver estadísticas del chat
+aiChat.getStats()
+
+// Cambiar a OpenAI
+aiChat.switchAPI('openai')
+
+// Cambiar a Claude
+aiChat.switchAPI('claude')
+
+// Volver a simulación
+aiChat.switchAPI('local')
+
+// Limpiar historial
+aiChat.clearHistory()
+
+// Exportar chat a JSON
+aiChat.exportHistory()
+
+// Ver configuración
+aiChat.config
+        </div>
+
+        <h2>📊 Cambiar entre APIs</h2>
+
+        <p>Puedes cambiar la API activa de 3 formas:</p>
+
+        <h3>1. Desde la consola del navegador:</h3>
+        <div class="code-block">aiChat.switchAPI('claude')  // o 'openai', 'gemini', 'local'</div>
+
+        <h3>2. Editando <code>ai-chat.js</code> (línea ~20):</h3>
+        <div class="code-block">activeAPI: 'claude'  // Cambiar a tu preferencia</div>
+
+        <h3>3. Editando <code>api-config.json</code>:</h3>
+        <div class="code-block">"enabled": true  // Habilitar/deshabilitar APIs</div>
+
+        <h2>🎨 Personalización</h2>
+
+        <h3>Cambiar colores del sitio:</h3>
+        <p>Edita las variables CSS en <code>styles.css</code> (líneas 8-17):</p>
+        <div class="code-block">
+:root {
+    --color-primary: #22A3E6;    /* Tu color aquí */
+    --color-secondary: #00A488;  /* Tu color aquí */
+    --color-accent: #FFCC00;     /* Tu color aquí */
+}
+        </div>
+
+        <h3>Modificar respuestas simuladas:</h3>
+        <p>Edita el objeto <code>responses</code> en <code>ai-chat.js</code> (línea ~200)</p>
+
+        <h3>Cambiar prompt del sistema:</h3>
+        <p>Edita <code>api-config.json</code> en la sección <code>systemPrompts</code></p>
+
+        <h2>🔒 Seguridad - MUY IMPORTANTE</h2>
+
+        <div class="warning">
+            <strong>⚠️ NUNCA compartas tus API keys:</strong>
+            <ul style="margin-top: 10px;">
+                <li>NO subas el archivo <code>.env</code> a GitHub</li>
+                <li>NO compartas screenshots con tus keys visibles</li>
+                <li>Usa <code>.gitignore</code> para excluir archivos sensibles</li>
+                <li>Regenera tus keys si las expusiste accidentalmente</li>
+            </ul>
+        </div>
+
+        <h2>🐛 Solución de Problemas</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Problema</th>
+                    <th>Solución</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>El chat no responde</td>
+                    <td>Verifica que el servidor esté corriendo (<code>npm start</code>)</td>
+                </tr>
+                <tr>
+                    <td>Error "API key inválida"</td>
+                    <td>Verifica que copiaste la key completa en <code>.env</code></td>
+                </tr>
+                <tr>
+                    <td>Error de CORS</td>
+                    <td>Reinicia el servidor y abre desde <code>localhost:3000</code></td>
+                </tr>
+                <tr>
+                    <td>npm install falla</td>
+                    <td>Actualiza Node.js a la versión 16 o superior</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>📚 Recursos Adicionales</h2>
+
+        <ul>
+            <li>📖 <strong>README.md:</strong> Documentación completa del proyecto</li>
+            <li>🔧 <strong>api-config.json:</strong> Todas las configuraciones de APIs</li>
+            <li>💻 <strong>Consola (F12):</strong> Ver logs y usar comandos debug</li>
+        </ul>
+
+        <h2>✅ Checklist de Presentación</h2>
+
+        <div class="steps" style="list-style-type: none;">
+            <li style="padding-left: 0;">
+                <input type="checkbox"> Probé que el sitio se ve bien en desktop
+            </li>
+            <li style="padding-left: 0;">
+                <input type="checkbox"> Probé que el sitio se ve bien en móvil
+            </li>
+            <li style="padding-left: 0;">
+                <input type="checkbox"> El chat de IA responde correctamente
+            </li>
+            <li style="padding-left: 0;">
+                <input type="checkbox"> Personalizé los colores según mi marca
+            </li>
+            <li style="padding-left: 0;">
+                <input type="checkbox"> Configuré las API keys (si uso backend)
+            </li>
+            <li style="padding-left: 0;">
+                <input type="checkbox"> Revisé que no hay errores en la consola (F12)
+            </li>
+        </div>
+
+        <h2>🎉 ¡Listo para Presentar!</h2>
+
+        <div class="success">
+            <strong>Todo configurado correctamente.</strong><br>
+            Tu demo de Campus Royal está lista para impresionar a tu cliente y al gobierno. ¡Mucha suerte! 🚀
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 2px solid #e5e7eb;">
+            <a href="index.html" class="btn">🚀 Abrir Demo Principal</a>
+            <a href="README.md" class="btn" style="background: linear-gradient(135deg, #667eea, #764ba2);">📖 Ver Documentación Completa</a>
+        </div>
+
+        <p style="text-align: center; margin-top: 30px; color: #6b7280; font-size: 0.9em;">
+            Desarrollado con ❤️ para presentaciones gubernamentales y empresariales<br>
+            © 2025 Campus Royal - Todos los derechos reservados
+        </p>
+    </div>
+</body>
+</html>

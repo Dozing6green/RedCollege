@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Royal - Plataforma Educativa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <rect width="40" height="40" rx="8" fill="url(#gradient1)"/>
+                        <path d="M20 10L25 15H22V25H18V15H15L20 10Z" fill="white"/>
+                        <defs>
+                            <linearGradient id="gradient1" x1="0" y1="0" x2="40" y2="40">
+                                <stop offset="0%" stop-color="#22A3E6"/>
+                                <stop offset="100%" stop-color="#00A488"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="logo-text">Campus Royal</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#cursos">Cursos</a></li>
+                    <li><a href="#caracteristicas">Características</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="btn btn-secondary">Iniciar Sesión</button>
+                    <button class="btn btn-primary">Registrarse</button>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Transforma tu futuro con
+                        <span class="gradient-text">educación de clase mundial</span>
+                    </h1>
+                    <p class="hero-description">
+                        Accede a más de 1,000 cursos diseñados por expertos, aprende a tu ritmo y
+                        obtén certificaciones reconocidas internacionalmente. Tu camino hacia el éxito comienza aquí.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-large">Explorar Cursos</button>
+                        <button class="btn btn-outline btn-large">Ver Demo</button>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">50K+</div>
+                            <div class="stat-label">Estudiantes Activos</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">1,200+</div>
+                            <div class="stat-label">Cursos Disponibles</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Satisfacción</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-image-wrapper">
+                        <div class="floating-card card-1">
+                            <div class="card-icon">📚</div>
+                            <div class="card-text">Aprende desde casa</div>
+                        </div>
+                        <div class="floating-card card-2">
+                            <div class="card-icon">🎓</div>
+                            <div class="card-text">Certificados oficiales</div>
+                        </div>
+                        <div class="floating-card card-3">
+                            <div class="card-icon">⚡</div>
+                            <div class="card-text">Resultados rápidos</div>
+                        </div>
+                        <div class="hero-illustration">
+                            <svg viewBox="0 0 500 500" fill="none">
+                                <circle cx="250" cy="250" r="200" fill="url(#heroGradient)" opacity="0.1"/>
+                                <circle cx="250" cy="250" r="150" fill="url(#heroGradient)" opacity="0.2"/>
+                                <circle cx="250" cy="250" r="100" fill="url(#heroGradient)" opacity="0.3"/>
+                                <defs>
+                                    <linearGradient id="heroGradient">
+                                        <stop offset="0%" stop-color="#22A3E6"/>
+                                        <stop offset="100%" stop-color="#00A488"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="caracteristicas" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">¿Por qué elegir Campus Royal?</h2>
+                <p class="section-description">
+                    Ofrecemos una experiencia de aprendizaje única con herramientas innovadoras
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #22A3E6, #1e90d1);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Aprendizaje Flexible</h3>
+                    <p class="feature-description">
+                        Estudia a tu propio ritmo, cuando y donde quieras. Acceso 24/7 a todos los contenidos.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #00A488, #009975);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Instructores Expertos</h3>
+                    <p class="feature-description">
+                        Aprende de profesionales reconocidos con años de experiencia en la industria.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #FFCC00, #f5c200);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Certificaciones Oficiales</h3>
+                    <p class="feature-description">
+                        Obtén certificados reconocidos por la industria al completar tus cursos.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #FF6B6B, #ee5a52);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Asistente IA 24/7</h3>
+                    <p class="feature-description">
+                        Resuelve tus dudas al instante con nuestro asistente de inteligencia artificial.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #A855F7, #9333ea);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Proyectos Prácticos</h3>
+                    <p class="feature-description">
+                        Aplica lo aprendido con proyectos reales que fortalecerán tu portafolio.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #EC4899, #db2777);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="17 8 12 3 7 8"/>
+                            <line x1="12" y1="3" x2="12" y2="15"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Comunidad Global</h3>
+                    <p class="feature-description">
+                        Conecta con estudiantes de todo el mundo y amplía tu red profesional.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="cursos" class="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Cursos Destacados</h2>
+                <p class="section-description">Descubre nuestros programas más populares</p>
+            </div>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <div class="course-badge">Más Popular</div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="course-category">Programación</span>
+                            <span class="course-level">Intermedio</span>
+                        </div>
+                        <h3 class="course-title">Desarrollo Web Full Stack 2025</h3>
+                        <p class="course-description">
+                            Aprende a crear aplicaciones web modernas con React, Node.js y bases de datos.
+                        </p>
+                        <div class="course-info">
+                            <div class="course-rating">
+                                ⭐ 4.9 (2,450 reseñas)
+                            </div>
+                            <div class="course-students">
+                                👥 12,340 estudiantes
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-price">$89.99</div>
+                            <button class="btn btn-primary">Ver Curso</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <div class="course-badge">Nuevo</div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="course-category">IA & ML</span>
+                            <span class="course-level">Avanzado</span>
+                        </div>
+                        <h3 class="course-title">Inteligencia Artificial con Python</h3>
+                        <p class="course-description">
+                            Domina Machine Learning, Deep Learning y procesamiento de lenguaje natural.
+                        </p>
+                        <div class="course-info">
+                            <div class="course-rating">
+                                ⭐ 4.8 (1,890 reseñas)
+                            </div>
+                            <div class="course-students">
+                                👥 8,720 estudiantes
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-price">$129.99</div>
+                            <button class="btn btn-primary">Ver Curso</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="course-category">Diseño</span>
+                            <span class="course-level">Principiante</span>
+                        </div>
+                        <h3 class="course-title">UX/UI Design Profesional</h3>
+                        <p class="course-description">
+                            Crea interfaces atractivas y funcionales con Figma y principios de diseño.
+                        </p>
+                        <div class="course-info">
+                            <div class="course-rating">
+                                ⭐ 4.7 (1,340 reseñas)
+                            </div>
+                            <div class="course-students">
+                                👥 6,890 estudiantes
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-price">$69.99</div>
+                            <button class="btn btn-primary">Ver Curso</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Lo que dicen nuestros estudiantes</h2>
+                <p class="section-description">Historias de éxito de nuestra comunidad</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "Campus Royal cambió mi carrera por completo. En 6 meses pasé de no saber programar
+                        a conseguir mi primer trabajo como desarrollador web."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2);">MC</div>
+                        <div class="author-info">
+                            <div class="author-name">María Contreras</div>
+                            <div class="author-role">Desarrolladora Front-end</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "Los instructores son excepcionales y el contenido está siempre actualizado.
+                        El asistente de IA me ayudó muchísimo cuando tenía dudas a medianoche."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c);">JR</div>
+                        <div class="author-info">
+                            <div class="author-name">Juan Rodríguez</div>
+                            <div class="author-role">Data Scientist</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "La flexibilidad de estudiar a mi ritmo fue fundamental. Pude combinar mi trabajo
+                        con los cursos y ahora tengo una certificación internacional."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">AS</div>
+                        <div class="author-info">
+                            <div class="author-name">Ana Silva</div>
+                            <div class="author-role">UX Designer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">¿Listo para comenzar tu transformación?</h2>
+                <p class="cta-description">
+                    Únete a más de 50,000 estudiantes que ya están construyendo su futuro
+                </p>
+                <button class="btn btn-white btn-large">Comenzar Ahora - Gratis</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect width="40" height="40" rx="8" fill="url(#footerGradient)"/>
+                            <path d="M20 10L25 15H22V25H18V15H15L20 10Z" fill="white"/>
+                            <defs>
+                                <linearGradient id="footerGradient" x1="0" y1="0" x2="40" y2="40">
+                                    <stop offset="0%" stop-color="#22A3E6"/>
+                                    <stop offset="100%" stop-color="#00A488"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>Campus Royal</span>
+                    </div>
+                    <p class="footer-description">
+                        Transformando vidas a través de la educación de calidad mundial.
+                    </p>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Cursos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Programación</a></li>
+                        <li><a href="#">Diseño</a></li>
+                        <li><a href="#">Negocios</a></li>
+                        <li><a href="#">Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Recursos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Guías</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Soporte</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Carreras</a></li>
+                        <li><a href="#">Privacidad</a></li>
+                        <li><a href="#">Términos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Campus Royal. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Chat Button -->
+    <button id="aiChatButton" class="ai-chat-button" aria-label="Abrir asistente de IA">
+        <svg class="ai-icon" fill="none" preserveAspectRatio="none" viewBox="0 0 28 31">
+            <g id="Group 162975">
+                <path d="M12.3635 6.73759H12.5159C12.5159 4.92134 14.0321 3.44308 15.8949 3.44308V3.29451C14.0321 3.29451 12.5159 1.81625 12.5159 0H12.3635C12.3635 1.81625 10.8473 3.29451 8.98438 3.29451V3.44308C10.8473 3.44308 12.3635 4.92134 12.3635 6.73759Z" fill="#00A488"></path>
+                <path d="M5.65036 5.38981H5.40655C5.40655 8.29581 2.98061 10.661 0 10.661V10.8987C2.98061 10.8987 5.40655 13.264 5.40655 16.17H5.65036C5.65036 13.264 8.0763 10.8987 11.0569 10.8987V10.661C8.0763 10.661 5.65036 8.29581 5.65036 5.38981Z" fill="#FFCC00"></path>
+                <path d="M27.1029 19.718V19.4864H27.0494C20.98 19.4864 16.0449 14.6748 16.0449 8.75735V8.70524H15.8073V8.75735C15.8073 14.6748 10.8722 19.4864 4.8028 19.4864H4.74935V19.718H4.8028C10.8722 19.718 15.8073 24.5296 15.8073 30.4471V30.4992H16.0449V30.4471C16.0449 24.5296 20.98 19.718 27.0494 19.718H27.1029Z" fill="#22A3E6"></path>
+            </g>
+        </svg>
+    </button>
+
+    <!-- AI Chat Modal -->
+    <div id="aiChatModal" class="ai-chat-modal">
+        <div class="ai-chat-overlay"></div>
+        <div class="ai-chat-container">
+            <div class="ai-chat-header">
+                <div class="ai-chat-title">
+                    <svg class="ai-icon-small" fill="none" preserveAspectRatio="none" viewBox="0 0 28 31">
+                        <g>
+                            <path d="M12.3635 6.73759H12.5159C12.5159 4.92134 14.0321 3.44308 15.8949 3.44308V3.29451C14.0321 3.29451 12.5159 1.81625 12.5159 0H12.3635C12.3635 1.81625 10.8473 3.29451 8.98438 3.29451V3.44308C10.8473 3.44308 12.3635 4.92134 12.3635 6.73759Z" fill="#00A488"></path>
+                            <path d="M5.65036 5.38981H5.40655C5.40655 8.29581 2.98061 10.661 0 10.661V10.8987C2.98061 10.8987 5.40655 13.264 5.40655 16.17H5.65036C5.65036 13.264 8.0763 10.8987 11.0569 10.8987V10.661C8.0763 10.661 5.65036 8.29581 5.65036 5.38981Z" fill="#FFCC00"></path>
+                            <path d="M27.1029 19.718V19.4864H27.0494C20.98 19.4864 16.0449 14.6748 16.0449 8.75735V8.70524H15.8073V8.75735C15.8073 14.6748 10.8722 19.4864 4.8028 19.4864H4.74935V19.718H4.8028C10.8722 19.718 15.8073 24.5296 15.8073 30.4471V30.4992H16.0449V30.4471C16.0449 24.5296 20.98 19.718 27.0494 19.718H27.1029Z" fill="#22A3E6"></path>
+                        </g>
+                    </svg>
+                    <span>Asistente IA</span>
+                    <span class="ai-status">● En línea</span>
+                </div>
+                <button id="aiChatClose" class="ai-chat-close" aria-label="Cerrar chat">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="ai-chat-messages" id="aiChatMessages">
+                <div class="ai-message">
+                    <div class="message-avatar ai-avatar">
+                        <svg width="20" height="20" viewBox="0 0 28 31" fill="none">
+                            <path d="M12.3635 6.73759H12.5159C12.5159 4.92134 14.0321 3.44308 15.8949 3.44308V3.29451C14.0321 3.29451 12.5159 1.81625 12.5159 0H12.3635C12.3635 1.81625 10.8473 3.29451 8.98438 3.29451V3.44308C10.8473 3.44308 12.3635 4.92134 12.3635 6.73759Z" fill="#00A488"></path>
+                            <path d="M5.65036 5.38981H5.40655C5.40655 8.29581 2.98061 10.661 0 10.661V10.8987C2.98061 10.8987 5.40655 13.264 5.40655 16.17H5.65036C5.65036 13.264 8.0763 10.8987 11.0569 10.8987V10.661C8.0763 10.661 5.65036 8.29581 5.65036 5.38981Z" fill="#FFCC00"></path>
+                            <path d="M27.1029 19.718V19.4864H27.0494C20.98 19.4864 16.0449 14.6748 16.0449 8.75735V8.70524H15.8073V8.75735C15.8073 14.6748 10.8722 19.4864 4.8028 19.4864H4.74935V19.718H4.8028C10.8722 19.718 15.8073 24.5296 15.8073 30.4471V30.4992H16.0449V30.4471C16.0449 24.5296 20.98 19.718 27.0494 19.718H27.1029Z" fill="#22A3E6"></path>
+                        </svg>
+                    </div>
+                    <div class="message-content">
+                        <p>¡Hola! Soy tu asistente de IA de Campus Royal. ¿En qué puedo ayudarte hoy?</p>
+                        <div class="quick-actions">
+                            <button class="quick-action">Ver cursos recomendados</button>
+                            <button class="quick-action">Consultar certificaciones</button>
+                            <button class="quick-action">Ayuda con inscripción</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ai-chat-input-container">
+                <div class="ai-typing-indicator" id="aiTypingIndicator" style="display: none;">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                </div>
+                <form id="aiChatForm" class="ai-chat-form">
+                    <textarea
+                        id="aiChatInput"
+                        class="ai-chat-input"
+                        placeholder="Escribe tu pregunta..."
+                        rows="1"
+                    ></textarea>
+                    <button type="submit" class="ai-chat-send" aria-label="Enviar mensaje">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"/>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="ai-chat.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

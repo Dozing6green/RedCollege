@@ -1,0 +1,121 @@
+{
+  "version": "1.0.0",
+  "description": "Configuración de APIs de IA para Campus Royal",
+  "apis": {
+    "openai": {
+      "enabled": true,
+      "name": "OpenAI GPT",
+      "provider": "OpenAI",
+      "baseURL": "https://api.openai.com/v1",
+      "endpoint": "/chat/completions",
+      "models": {
+        "default": "gpt-3.5-turbo",
+        "available": [
+          "gpt-3.5-turbo",
+          "gpt-4",
+          "gpt-4-turbo-preview"
+        ]
+      },
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer YOUR_OPENAI_API_KEY"
+      },
+      "defaultParams": {
+        "temperature": 0.7,
+        "max_tokens": 500,
+        "top_p": 1,
+        "frequency_penalty": 0,
+        "presence_penalty": 0
+      },
+      "rateLimits": {
+        "requestsPerMinute": 60,
+        "tokensPerMinute": 90000
+      },
+      "pricing": {
+        "inputTokensPer1K": 0.0005,
+        "outputTokensPer1K": 0.0015
+      }
+    },
+    "claude": {
+      "enabled": true,
+      "name": "Claude (Anthropic)",
+      "provider": "Anthropic",
+      "baseURL": "https://api.anthropic.com/v1",
+      "endpoint": "/messages",
+      "models": {
+        "default": "claude-3-sonnet-20240229",
+        "available": [
+          "claude-3-opus-20240229",
+          "claude-3-sonnet-20240229",
+          "claude-3-haiku-20240307"
+        ]
+      },
+      "headers": {
+        "Content-Type": "application/json",
+        "x-api-key": "YOUR_CLAUDE_API_KEY",
+        "anthropic-version": "2023-06-01"
+      },
+      "defaultParams": {
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1
+      },
+      "rateLimits": {
+        "requestsPerMinute": 50,
+        "tokensPerMinute": 100000
+      },
+      "pricing": {
+        "inputTokensPer1K": 0.003,
+        "outputTokensPer1K": 0.015
+      }
+    },
+    "gemini": {
+      "enabled": false,
+      "name": "Google Gemini",
+      "provider": "Google",
+      "baseURL": "https://generativelanguage.googleapis.com/v1beta",
+      "endpoint": "/models/gemini-pro:generateContent",
+      "models": {
+        "default": "gemini-pro",
+        "available": [
+          "gemini-pro",
+          "gemini-pro-vision"
+        ]
+      },
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "apiKeyParam": "key",
+      "defaultParams": {
+        "temperature": 0.7,
+        "maxOutputTokens": 800,
+        "topK": 40,
+        "topP": 0.95
+      },
+      "rateLimits": {
+        "requestsPerMinute": 60
+      }
+    }
+  },
+  "systemPrompts": {
+    "default": "Eres un asistente educativo de Campus Royal, una plataforma de aprendizaje en línea. Tu función es ayudar a los estudiantes con información sobre cursos, certificaciones, métodos de pago, y resolver dudas generales sobre la plataforma. Sé amable, profesional y conciso en tus respuestas.",
+    "technical": "Eres un asistente técnico especializado de Campus Royal. Ayudas con problemas de acceso a la plataforma, navegación, y cuestiones técnicas. Proporciona soluciones paso a paso.",
+    "sales": "Eres un asesor comercial de Campus Royal. Ayudas a los usuarios a encontrar el curso perfecto para sus necesidades, explicas precios y beneficios, y facilitas el proceso de inscripción."
+  },
+  "features": {
+    "streaming": false,
+    "conversationHistory": true,
+    "maxHistoryMessages": 10,
+    "caching": true,
+    "cacheDuration": 3600,
+    "fallbackToLocal": true,
+    "errorRetries": 3,
+    "timeoutSeconds": 30
+  },
+  "monitoring": {
+    "logRequests": true,
+    "logResponses": true,
+    "trackUsage": true,
+    "trackCosts": true
+  }
+}
