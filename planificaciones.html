@@ -222,22 +222,22 @@
         <!-- Left Panel - List of Units -->
         <section class="bg-white rounded-xl flex-1 min-w-[650px] max-w-[800px] flex flex-col p-5 max-h-[calc(100vh-160px)]">
             <!-- Header -->
-            <header class="pt-6 px-8 pb-6 border-b border-gray-200">
+            <header class="pt-6 px-8 pb-6" style="border-bottom: 1px solid #D6E7F0; margin-bottom: 12px;">
                 <!-- First Row: Planning Info + Buttons -->
                 <div class="flex items-center justify-between mb-4">
                     <!-- Left: Back button + Planning Info -->
-                    <div class="flex items-center gap-3">
-                        <button class="hover:bg-gray-100 p-2 rounded-md transition-colors">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                <path d="M15 10H5M10 5l-5 5 5 5" stroke="#0f6491" stroke-width="2" stroke-linecap="round"/>
+                    <div class="flex items-center" style="gap: 12px;">
+                        <button class="p-2 rounded-md transition-all hover:opacity-85">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M19 12H5M12 5l-7 7 7 7" stroke="#004A87" stroke-width="2" stroke-linecap="round"/>
                             </svg>
                         </button>
                         <div>
-                            <div class="flex items-center gap-2">
-                                <p class="text-[#212b32] text-[17px] font-semibold truncate">Planificación Matemática 2025</p>
-                                <span class="bg-[#e1f4fd] text-[#0f6491] text-[11px] font-bold px-2 py-1 rounded">50%</span>
+                            <div class="flex items-center" style="gap: 8px;">
+                                <h1 style="font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-size: 17px; font-weight: 600; color: oklch(0.145 0 0); margin: 0;">Planificación Matemática 2025</h1>
+                                <span style="background: #E7F3FA; color: #004A87; font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 6px;">50%</span>
                             </div>
-                            <p class="text-[#4c6272] text-base font-medium truncate">2 Enseñanza Básica A - Matemática</p>
+                            <p style="font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-size: 16px; font-weight: 500; color: rgb(76, 98, 114); margin: 4px 0 0 0;">2 Enseñanza Básica A - Matemática</p>
                         </div>
                     </div>
 
@@ -538,6 +538,13 @@
             <div class="bg-[#e1f4fd] p-4 pb-3">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center gap-2 min-w-0 flex-1">
+                        <!-- Check Icon -->
+                        <div class="flex-shrink-0" style="width: 20px; height: 20px; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.05));">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <circle cx="10" cy="10" r="9.5" fill="#B8C5D0" stroke="#A0B0BD" stroke-width="1"/>
+                                <path d="M6 10l3 3 5-5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
                         <span class="text-[#0f6491] text-lg font-semibold whitespace-nowrap">Unidad 01</span>
                         <span class="text-[#707070] text-lg">|</span>
                         <p class="text-[#212b32] text-base font-medium truncate">Titulo de la unidad, si supera el limite de caracteres...</p>
