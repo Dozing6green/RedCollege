@@ -40,9 +40,18 @@ temp/
 # Build
 dist/
 build/
+public/dist/
 
 # API Keys (seguridad extra)
 *api-key*
 *apikey*
 credentials.json
 secrets.json
+
+# Output de herramientas
+tools/output/
+tools/temp/
+
+# Capturas y exports
+*.png.bak
+*.svg.bak

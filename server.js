@@ -18,16 +18,17 @@ app.use(express.static(__dirname));
 
 // Cargar configuración
 let apiConfig;
-(async () => {
+
+async function loadConfig() {
     try {
-        const configData = await fs.readFile('./api-config.json', 'utf8');
+        const configData = await fs.readFile('./config/api-config.json', 'utf8');
         apiConfig = JSON.parse(configData);
         console.log('✅ Configuración de APIs cargada');
     } catch (error) {
         console.error('❌ Error al cargar configuración:', error);
         process.exit(1);
     }
-})();
+}
 
 // Logger middleware
 app.use((req, res, next) => {
@@ -69,9 +70,17 @@ function buildClaudePayload(requestData) {
 // Endpoints de API
 // ===================================
 
-// Ruta principal
+// Rutas para módulos
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'src/modules/landing/index.html'));
+});
+
+app.get('/planificaciones', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src/modules/planificaciones/index.html'));
+});
+
+app.get('/evalua360', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src/modules/evalua360/index.html'));
 });
 
 // Health check
@@ -346,8 +355,11 @@ app.use((err, req, res, next) => {
 // Inicio del servidor
 // ===================================
 
-app.listen(PORT, () => {
-    console.log(`
+async function startServer() {
+    await loadConfig();
+
+    app.listen(PORT, () => {
+        console.log(`
 ╔═══════════════════════════════════════════╗
 ║   🎓 Campus Royal - AI Server            ║
 ║   🚀 Servidor iniciado exitosamente      ║
@@ -366,7 +378,14 @@ APIs disponibles:
 ❤️  Health Check: http://localhost:${PORT}/api/health
 
 Presiona Ctrl+C para detener el servidor
-    `);
+        `);
+    });
+}
+
+// Iniciar el servidor
+startServer().catch(error => {
+    console.error('❌ Error al iniciar el servidor:', error);
+    process.exit(1);
 });
 
 // Manejo de shutdown graceful
