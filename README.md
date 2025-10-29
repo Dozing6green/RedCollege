@@ -296,6 +296,6 @@ Para dudas o problemas:
 
 ---
 
-**Desarrollado con ❤️ para presentaciones gubernamentales y empresariales**
+**Desarrollado con 🤖 para presentaciones gubernamentales y empresariales**
 
 ¡Buena suerte con tu demo! 🚀
